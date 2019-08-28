@@ -1,3 +1,37 @@
+#buttonDiv {
+    text-align: center;
+    width: auto;
+}
+#header {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    height: 90px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    word-wrap: break-word;
+    width: auto;
+}
+.buttonDiv {
+    text-align: center;
+.imageDiv {
+    background-image: url("../Images/56660803-toilet-paper-icon-pop-art-style-colorful-icons-set-.jpg");
+    background-size: contain;
+    margin-top: 20px;
+    width: auto;
+    height: 500px;
+}
+footer {
+    text-align: center;
+    width: auto;
+}
+span {
+    /* margin-left: 40px; */
+}
+
 * {
 	box-sizing: border-box;
 }
