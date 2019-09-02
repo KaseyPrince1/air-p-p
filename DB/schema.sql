@@ -11,6 +11,7 @@ CREATE TABLE users(
   email_address VARCHAR(150) NOT NULL,
   age           INT          NOT NULL, 
   gender        VARCHAR(10)  NOT NULL, 
+  password      VARCHAR(30)  NOT NULL,
   PRIMARY KEY (id)
 );
 
