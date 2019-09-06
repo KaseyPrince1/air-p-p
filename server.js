@@ -1,21 +1,17 @@
 const express = require("express");
+const path = require('path');
 const app = express();
 const PORT = 3000;
 const db = require("./models");
 
+app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("public"));
 
 app.use(require('./controller'));
 
-///passport 
-app.get('/signIn', (req, res) => {
-  res.render('signIn');
-}
 
-
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("App listening on PORT " + PORT));
 });
