@@ -14,6 +14,11 @@ app.use(express.static("public"));
 // routes
 app.use(require('./controller'));
 
+///passport 
+app.get('/signIn', (req, res) => {
+  res.render('signIn');
+}
+
 
 db.sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log("App listening on PORT " + PORT));
