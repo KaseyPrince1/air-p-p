@@ -5,7 +5,7 @@ const db = require('../../models');
 // Find all locations by type
 router.get('/all/:type', (req, res) => {
     console.log(req.params);
-  db.Location.findAll({where:{loc_type:"mall"}})
+  db.Location.findAll({where:{loc_type:req.params.loc_type}})
     .then(location => {
       res.json(location);
     })
