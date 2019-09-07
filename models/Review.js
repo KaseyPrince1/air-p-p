@@ -19,3 +19,16 @@ module.exports = function(sequelize, DataTypes) {
 
   return Review;
 };
+
+  //Immediate insertion of data into database based on user input. 
+  sequelize.sync().success(function () {
+    Review.create({
+       user_loc:     $('#inputLocation').val().trim(),
+       clean_status: $('#Cleanliness').val().trim(),
+       wait_time:    $('#Wait').val().trim(),
+       star_rvw:     $('#star').val().trim(),
+       user_notes:     'null',
+    }).success(function (data){
+    console.log(data.values)
+   })
+  });
