@@ -1,7 +1,7 @@
-const mallCards = document.getElementById('mall-cards');
+const schoolCards = document.getElementById('school-cards');
 
-function fetchMalls() {
-    fetch('/api/location/all/malls')
+function fetchSchools() {
+    fetch('/api/location/all/schools')
         .then(res=> {
             if(res.ok){
                 return res.json();
@@ -9,11 +9,11 @@ function fetchMalls() {
         })
         .then(data => {
             for (let i = 0; i < data.length; i++) {
-                let mall = data[i];
-                const mallCard = `<div class="card">
-                <img src="./assets/images/fashion-place.jpg" class="card-img-top" alt="mall card">
+                let school = data[i];
+                const schoolCard = `<div class="card">
+                <img src="./assets/images/fashion-place.jpg" class="card-img-top" alt="school card">
                 <div class="card-body">
-                  <h5 class="card-title">${mall.loc_name}</h5>
+                  <h5 class="card-title">${school.loc_name}</h5>
               </div>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">Location</li>
@@ -21,14 +21,14 @@ function fetchMalls() {
                 <li class="list-group-item">Overall Rating</li>
               </ul>
               <div class="card-body">
-                <a href="/bathroom?id=${mall.id}" class="card-link">Visit</a>
+                <a href="/bathroom?id=${school.id}" class="card-link">Visit</a>
               </div>
               </div>`;
 
-                mallCards.innerHTML += mallCard;
+                schoolCards.innerHTML += schoolCard;
             }
         })
         .catch(error => console.error(error));
 }
 
-fetchMalls();
+fetchSchools();
