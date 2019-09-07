@@ -188,3 +188,8 @@ a {
 .signin-html .sign-up:checked + .tab + .signin-form .sign-up-htm{
 	transform:rotate(0);
 }
+
+.indexImg {
+	width: 200px;
+	height: 150px;
+}
