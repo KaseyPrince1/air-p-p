@@ -1,10 +1,10 @@
 module.exports = function(sequelize, DataTypes) {
   const Review = sequelize.define("Review", {
-    user_loc: DataTypes.STRING,
+    user_loc:     DataTypes.STRING,
     clean_status: DataTypes.INTEGER,
-    wait_time: DataTypes.STRING,
-    star_rvw: DataTypes.INTEGER,
-    user_notes: DataTypes.STRING,
+    wait_time:    DataTypes.STRING,
+    star_rvw:     DataTypes.INTEGER,
+    user_notes:   DataTypes.STRING,
   });
 
   Review.associate = models => {
