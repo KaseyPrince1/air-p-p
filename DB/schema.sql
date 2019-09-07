@@ -15,12 +15,6 @@ CREATE TABLE users(
   PRIMARY KEY (id)
 );
 
-
-
--- user         VARCHAR(45)  NOT NULL, --autofilled based on user profile
--- pics to be added later
--- pic_sub      VARCHAR(500) NOT NULL, --able to submit a picture and submit 
-
 CREATE TABLE rvw_sub (
     id           INT          NOT NULL AUTO_INCREMENT,
     user_loc     VARCHAR(150) NOT NULL --auto fill based on user profile --gender we can join from user rather than filling another table with redundant data 
@@ -39,4 +33,13 @@ CREATE TABLE locations (
   loc_name     VARCHAR(45),
   bldng_name   VARCHAR(45),
   PRIMARY KEY (id)
+)
+
+CREATE TABLE bathrooms (
+  id           INT          NOT NULL AUTO_INCREMENT,
+  bldng_name   VARCHAR(45),
+  LOCATION     VARCHAR(45)  NOT NULL,
+  clean_status INT          NOT NULL, 
+  wait_time    INT          NOT NULL, 
+  star_rvw     INT          NOT NULL,
 )
