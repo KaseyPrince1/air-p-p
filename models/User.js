@@ -18,18 +18,3 @@ module.exports = function(sequelize, DataTypes) {
   return User;
 };
 
-//inserting user info input into user table 
-sequelize.sync().success(function () {
-  User.create({
-    first_name:     $("#first_name").val("").trim(),
-    last_name:      $("#last_name").val("").trim(),
-    email_address:  $("#email_address").val("").trim(),
-    age:            $("#age").val("").trim(),
-    gender:         $("#gender").val("").trim(),         
-  }).success(function (data){
-  console.log(data.values)
- })
-});
-
-
-
